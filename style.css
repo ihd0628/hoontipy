@@ -1,0 +1,88 @@
+:root {
+  --text-color:#f0f4f5;
+  --background-color:#d49466;
+  --accent-color:anycolor;
+}
+/* 상기와같은 방식으로 변수로 지정해서 색을 입힐수도 있음. */
+body {
+  margin:0;
+  font-family: 'Source Sans Pro';
+  background-color: black;
+  color: #f0f4f5;
+}
+
+a {
+  text-decoration: none;
+  color: #f0f4f5;
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d49466;
+  padding: 8px 12px;
+}
+
+.Title {
+  font-size: 24px;
+  color: white;
+}
+
+.Title i {
+  color: darkslategray;
+}
+
+.Header_Menu {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.Header_Menu li {
+  padding: 8px 12px;
+}
+
+.Header_Menu li:hover {
+  background-color: black;
+  border-radius: 4px;
+}
+
+.Header_icons {
+  list-style: none;
+  font-size: 24px;
+  padding: 0;
+}
+
+.Header_icons i {
+  color: black;
+}
+
+.Header_toggleBtn {
+  display: none;
+  position: absolute;
+  right: 24px;
+  font-size: 24px
+}
+
+@media (max-width: 768px) {
+  .Header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .Header_Menu {
+    display: none;
+    flex-direction: column;
+    padding: 8px 24px;
+  }
+  .Header_icons {
+    display: none;
+  }
+  .Header_toggleBtn {
+    display: block;
+  }
+  .Header_Menu.active,
+  .Header_icons.active {
+    display: flex;
+  }
+}
