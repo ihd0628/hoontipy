@@ -49,6 +49,8 @@ a {
 }
 
 .Header_icons {
+  display: flex;
+  align-items: center;
   list-style: none;
   font-size: 24px;
   padding: 0;
@@ -58,11 +60,32 @@ a {
   color: black;
 }
 
+.Header_icons #login_icons {
+  padding-left: 10px;
+}
+
+.Header_icons #login_icons {
+  padding-left: 10px;
+}
+
+.Header_icons #user_icons {
+  padding-left: 10px;
+}
+
+.Header_icons :hover {
+  font-weight: bold;
+  color: darkslategray;
+}
+
 .Header_toggleBtn {
   display: none;
   position: absolute;
   right: 24px;
   font-size: 24px
+}
+
+.hidden {
+  display: none;
 }
 
 @media (max-width: 768px) {
